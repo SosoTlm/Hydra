@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hydra – Ultra-Modern Window Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hydra – An ultra-modern, scriptable Lua window manager for X11. Simple, beautiful, fast.">
+  <style>
+    :root {
+      --primary: #111111;
+      --secondary: #9400D3;
+      --text: #eeeeee;
+      --accent: #9400D3;
+      --accent2: #c682fa;
+    }
+    html, body {
+      background: var(--primary);
+      color: var(--text);
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 18px;
+    }
+    header {
+      background: rgba(17,17,17,0.97);
+      border-bottom: 1px solid var(--secondary);
+    }
+    .container {
+      max-width: 980px; margin: auto; padding: 1.3em;
+    }
+    .nav {
+      display: flex; justify-content: flex-end; gap:2em;
+      align-items:center; margin-top:-3.8em; 
+    }
+    .logo {
+      font-size: 2.4em;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin:0;
+    }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s;}
+    a:hover { color: var(--accent2); }
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 70%, var(--secondary) 100%);
+      padding: 5em 0 3em;
+      text-align: center;
+    }
+    .hero h2 {
+      color: var(--text);
+      font-size: 2.6em;
+      font-weight: 700;
+      margin: 0 0 0.7em 0;
+      letter-spacing: 0.01em;
+    }
+    .hero .accent {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .hero p {
+      font-size: 1.27em; margin-top:0; color: #dedede;
+    }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 1em 2.3em;
+      border:none;
+      border-radius: 2.7em;
+      font-size: 1.16em;
+      font-weight: 600;
+      box-shadow: 0 2px 16px 0 #9400d340;
+      margin-top: 2em; display: inline-block;
+      cursor:pointer;
+      transition: background 0.18s;
+    }
+    .btn:hover { background: #ba55e4; color:#fff;}
+    .features {
+      padding: 3.4em 0 2em;
+      background: var(--primary);
+    }
+    .features h3 {
+      color: var(--accent);
+      text-align: left;
+      font-size: 2em;
+      margin-bottom: 1.05em;
+    }
+    .features ul {
+      list-style: none;
+      padding: 0; margin: 0 auto; max-width:700px; font-size:1.12em;
+    }
+    .features ul li {
+      margin-bottom: 1.15em;
+      padding-left: 1.7em; position: relative;
+      line-height:1.4;
+    }
+    .features ul li::before {
+      content: '⭑';
+      color: var(--accent);
+      position: absolute; left: 0;
+      font-size: 1em;
+    }
+    .download {
+      padding: 4em 0 2.2em;
+      background: linear-gradient(135deg, var(--primary) 50%, var(--secondary) 100%);
+      text-align: center;
+    }
+    .download h3 {
+      color: var(--accent);
+      font-size: 2em;
+      font-weight: 700;
+    }
+    .download .note { color: #cccccc; font-size:1.1em; margin-top:1.5em;}
+    footer {
+      background: #181320;
+      color: #bbb;
+      padding: 2.2em 0;
+      text-align:center;
+      font-size: 1.05em;
+      letter-spacing: 0.04em;
+    }
+    .accent { color: var(--accent);}
+    @media (max-width: 700px) {
+      .container { padding: 1em;}
+      .hero { padding: 2.5em 0 1.5em;}
+      .features { padding: 2em 0 1em;}
+      .download { padding: 2em 0 0.8em;}
+      .logo {font-size:1.3em;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+      <span class="logo">Hydra</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>An <span class="accent">ultra-modern</span> window manager<br> for <span class="accent">Linux</span></h2>
+      <p>A fast, scriptable, and beautiful window manager for X11,<br> written in Lua and designed for real customization.</p>
+      <a class="btn" href="https://github.com/SosoTlm/Hydra-WM" target="_blank">Download on GitHub</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h3>Features</h3>
+      <ul>
+        <li>Lightning-fast interface and true modularity</li>
+        <li>Modern Internet icon packs and theming</li>
+        <li>Fully scriptable in Lua</li>
+        <li>Simple .deb installation for Debian & Ubuntu</li>
+        <li>Built-in dark mode and advanced customization</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="download">
+    <div class="container">
+      <h3>Get Hydra</h3>
+      <a class="btn" href="https://github.com/SosoTlm/Hydra-WM" target="_blank">Download on GitHub</a>
+      <div class="note">
+        Latest releases, installation guide and source code:<br>
+        <a href="https://github.com/SosoTlm/Hydra-WM" target="_blank">https://github.com/SosoTlm/Hydra-WM</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 HydraWM &ndash; Crafted with <span class="accent">&hearts;</span> in black and purple. <br>
+    Open source project. MIT/GPL licensed.
+  </footer>
+</body>
+</html>
